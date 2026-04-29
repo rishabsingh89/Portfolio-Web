@@ -1,0 +1,12 @@
+import React from "react";
+
+function App() {
+  return (
+    <div style={{textAlign: "center"}}>
+      <h1>React Section</h1>
+      <p>This part is built using React</p>
+    </div>
+  );
+}
+
+export default App;
