@@ -148,4 +148,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- 6. Mobile Menu Toggle ---
+  const menuBtn = document.querySelector('.menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  const navLinksItems = document.querySelectorAll('.nav-links a');
+
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = menuBtn.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.setAttribute('data-lucide', 'x');
+      } else {
+        icon.setAttribute('data-lucide', 'menu');
+      }
+      if (window.lucide) lucide.createIcons();
+    });
+
+    // Close menu when a link is clicked
+    navLinksItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = menuBtn.querySelector('i');
+        icon.setAttribute('data-lucide', 'menu');
+        if (window.lucide) lucide.createIcons();
+      });
+    });
+  }
 });
