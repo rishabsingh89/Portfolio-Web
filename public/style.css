@@ -190,7 +190,7 @@ section {
     backdrop-filter: blur(10px);
     flex-direction: column;
     padding: 2rem 0;
-    text-align: center;
+    text-align: right;
     border-bottom: 1px solid var(--border-color);
   }
   [data-theme="light"] .nav-links {
@@ -200,7 +200,7 @@ section {
     display: flex;
   }
   .nav-links a {
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     width: 100%;
   }
   .menu-btn { display: block; }
